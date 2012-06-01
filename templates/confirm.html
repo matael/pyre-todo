@@ -1,0 +1,17 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+<form action="/del/confirm/{{queue.id}}" method="POST" id="form_confirm">
+		<fieldset>
+			<legend>Do you really want to delete "{{queue.name}}" ?</legend>
+	<input type="hidden" name="confirm" value="{{confirm}}"/>
+	<p><input type="submit" id="confirm_del_submit" value="Yes"/>
+	<a href="/{{queue.id}}"><input type="button" value="No ! I don't ! Just bring me back !"/></a></p>
+	</fieldset>
+</form>
+{% endblock %}
+
+
+{#
+ vim: set ft=htmldjango :
+#}

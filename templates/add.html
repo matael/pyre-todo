@@ -1,0 +1,22 @@
+{% extends 'templates/base.html' %}
+
+{% block extra_title %}| Add a new queue{% endblock %}
+
+
+{% block content %}
+	<form action="" method="post" id="form_add_queue">
+		<fieldset>
+			<legend>Add a new queue</legend>
+			<p><label for="form_q_name">New Queue's Name</label>
+				<input type="text" id="form_q_name" name="name"/></p>
+			<p>
+				<input type="submit" value="Add"/>
+				<a href="/"><input type="button" value="Cancel"/></a>
+			</p>
+		</fieldset>
+	</form>
+{% endblock %}
+
+{#
+ vim: set ft=htmldjango :
+#}

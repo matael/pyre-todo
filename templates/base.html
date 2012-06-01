@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf8"/>
+		<meta name="robots" content="noindex, nofollow"/>
+
+		<title>{% block title %}PyRe Todo{% endblock %}{% block extra_title %}{% endblock %}</title>
+
+		<!-- LESS CSS -->
+		<link rel="stylesheet/less" href="/static/main.less" media="screen" type="text/css"/>
+		<script type="text/javascript" src="/static/less.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			{% block header %}
+			<h1><a href="/">PyRe Todo</a></h1>
+			{% endblock %}
+			{% block subtitle %}{% endblock %}
+		</header>
+
+		<section id="content">
+		{% block content %}
+		{% endblock %}
+		</section>
+	</body>
+</html>
+
+{#
+ vim: set ft=htmldjango :
+#}

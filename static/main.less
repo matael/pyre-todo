@@ -1,0 +1,173 @@
+/* Stylesheet for PyRe *
+ *
+ * Must be compile using LessCSS
+ * developped by cloudhead, thanks !
+ *
+ */
+
+/* Colors */
+@base_light: #c1c1c1;
+@base_dark: #1c1c1c;
+@base_lighter: #d1d1d1;
+@base_font: @base_light + #220;
+
+/* General */
+@width: 900px;
+
+/* Style */
+
+body {
+	width: @width;
+	margin: auto;
+	font-family: sans-serif;
+	font-size: 0.9em;
+	background: @base_dark;
+	color: @base_font;
+
+	header {
+		text-align: center;
+
+		h1 {
+			font-size: 2.2em;
+
+			&:before {
+				color: @base_lighter;
+				content: "{";
+				font-weight: 300;
+				font-size:1.4em;
+			}
+
+			&:after {
+				color: @base_lighter;
+				font-weight: 300;
+				content: "}";
+				font-size:1.4em;
+			}
+			
+		}
+
+		h2 {
+			font-size: 1.5em;
+			margin-top: -20px;
+		}
+
+		h1, h2 {
+			a, a:hover, a:visited {
+				text-decoration: none ;
+				color: @base_font;
+			}
+		}
+	}
+}
+
+/* Home page */
+
+#queues_list {
+	max-width: @width;
+	display: table;
+	table-layout: fixed;
+	border-spacing: 15px;
+	font-weight: bold;
+	font-size: 1.1em;
+
+	.row {
+		display: table-row;
+	}
+
+	.queue {
+		display: table-cell;
+		border: 2px solid @base_dark - #090909;
+		text-align: center;
+		vertical-align: middle;
+		width: 280px;
+		height: 70px;
+		background: @base_dark + #070707;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+	
+		&:hover {
+			background: @base_dark + #272727;
+			border-color: @base_dark + #111;
+		}
+	}
+	
+	a, a:hover, a:visited {
+		text-decoration: none ;
+		color: @base_font;
+	}
+}
+
+/* Add a new queue */
+
+#form_add_queue, #form_add_item, #form_confirm {
+	text-align: center;
+
+	legend {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+
+	label {
+		display: block;
+	}
+
+	a, a:hover, a:visited {
+		text-decoration: none ;
+		color: @base_font;
+	}
+}
+
+/* Show a queue */
+
+#items {
+	max-width: @width - 200px;
+	margin:auto;
+
+	.item {
+		border: 2px solid @base_dark - #090909;
+		text-align: center;
+		vertical-align: middle;
+		width: 100%;
+		margin-bottom: 15px;
+		background: @base_dark + #070707;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+
+		h1 {
+			font-size: 1.2em;
+		}
+	
+		&:hover {
+			background: @base_dark + #272727;
+			border-color: @base_dark + #111;
+		}
+		
+		&:first-child { &:hover {
+			background: #183718;
+		}}
+		
+		.item_del {
+			text-align: right;
+			width: 99%;
+			margin-bottom: 2px;
+
+			&:hover {
+				a { color: #451E1E; }
+			}
+		}
+
+	}
+
+	#queue_del:hover {
+		background: #451E1E;
+	}
+
+
+	a, a:hover, a:visited {
+		text-decoration: none ;
+		color: @base_font;
+	}
+
+}

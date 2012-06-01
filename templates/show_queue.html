@@ -1,0 +1,40 @@
+{% extends "templates/base.html" %}
+
+{% block extra_title %} | {{queue.name}}{% endblock %}
+
+{% block subtitle %}
+<h2>{{queue.name}}</h2>
+{% endblock %}
+
+{% block content %}
+<div id="items">
+	<a href="/{{queue.id}}/add">
+		<div class="item">
+			<h1>Add a new item</h1>
+		</div>
+	</a>
+	{% for i in items %}
+	{#
+		Rappel : Champs des items
+
+		- id
+		- name
+		- description
+	#}
+	<div class="item">
+		<h1>{{i.name}}</h1>
+		<p class="item_description">{{i.description}}</p>
+		<p class="item_del"><a href="/{{queue.id}}/del/{{i.id}}">Delete</a></p>
+	</div>
+	{% endfor %}
+	<a href="/del/{{queue.id}}">
+		<div class="item" id="queue_del">
+			<h1>Delete the queue</h1>
+		</div>
+	</a>
+</div>
+{% endblock %}
+
+{#
+ vim: set ft=htmldjango
+#}

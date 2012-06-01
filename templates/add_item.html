@@ -1,0 +1,24 @@
+{% extends 'templates/base.html' %}
+
+{% block extra_title %}| {{queue.name}}{% endblock %}
+
+{% block subtitle %}
+<h2><a href="/{{queue.id}}">{{queue.name}}</a></h2>
+{% endblock %}
+
+{% block content %}
+	<form action="" method="post" id="form_add_item">
+		<fieldset>
+			<legend>Add a new item to "{{queue.name}}" </legend>
+			<p><label for="form_i_name">New Item's Name</label>
+				<input type="text" id="form_i_name" name="name"/></p>
+			<p><label for="form_i_description">New Item's Description</label>
+				<input type="text" id="form_i_description" name="description"/></p>
+			<p><input type="submit" value="Add"/></p>
+		</fieldset>
+	</form>
+{% endblock %}
+
+{#
+ vim: set ft=htmldjango :
+ #}
