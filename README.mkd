@@ -1,0 +1,6 @@
+PyRe Todo
+=========
+
+Python Redis Todo
+
+Let's try to build a simple todo-list application using python and redis.
